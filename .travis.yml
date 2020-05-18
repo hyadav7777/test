@@ -5,3 +5,12 @@ services:
 script:
     - docker build -t hyadav7777/node .
     - docker images hyadav7777/node
+
+before_deploy:
+	- docker login -u hyadav7777 -p CodeyayPie59!
+	
+deploy:
+	provider: script
+	script: docker push hyadav7777/node
+	on:
+		branch: master
