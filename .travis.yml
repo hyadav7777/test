@@ -7,7 +7,7 @@ script:
     - docker images hyadav7777/node
 
 before_deploy:
-	- docker login -u hyadav7777 -p CodeyayPie59!
+	- docker login -u "hyadav7777" -p "CodeyayPie59!"
 	
 deploy:
 	provider: script
